@@ -1,0 +1,27 @@
+<?php
+include_once 'includes/header.php';
+?>
+
+
+<div class="container">
+    <div class="formulario">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <h2>Preencha os dados do Proprietário</h2>
+            <div class="item">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+            <div class="item">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco">
+            </div>
+            
+            <button type="submit">Cadastrar</button>
+            
+        </form>
+    </div>
+</div>
+    
+<?php 
+include_once 'includes/footer.php'
+?>

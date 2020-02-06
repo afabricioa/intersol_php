@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    height: 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    ul{
+        display: flex;
+        font-size: 18px;
+        justify-content: center;
+        list-style: none;
+    }
+
+    ul li{
+        padding: 15px;
+    }
+
+    ul li a:hover{
+        color: crimson;
+    }
+}
+
+.container{
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 50px;
+
+    h1{
+        margin-top: 20px;
+    }
+
+    h2{
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .formulario{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 5%;
+        font-size: 18px;
+
+        .item{
+            min-width: 500px;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+
+            label{
+                width: 35%;
+            }
+
+            input{
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid lightgray;
+                width: 65%;
+                padding: 10px;
+            }
+            
+        }
+
+        button{
+            display: block;
+            width: 91%;
+            margin: 20px auto;
+            height: 40px;
+            border-radius: 2px;
+            font-size: 20px;
+            background-color: rgb(62, 174, 104);
+            color: white;
+            border: none;
+        }
+
+        button:hover{
+            color: rgb(221, 84, 50);
+        }
+    }
+}
+
+@media(max-width: 600px){
+    .formulario{
+        padding-top: 5%;
+    }
+}
