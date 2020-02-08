@@ -24,7 +24,6 @@ nav {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 2;
 }
 
 nav ul {
@@ -54,26 +53,6 @@ nav ul li a:hover {
   padding: 50px;
 }
 
-.container #botoes {
-  text-align: center;
-}
-
-.container .botaoShow {
-  background-color: #3eae68;
-  width: 15%;
-  height: 30px;
-  font-size: 18px;
-  color: white;
-  border-radius: 6px;
-  -webkit-box-shadow: 1px 1px 1px gray;
-          box-shadow: 1px 1px 1px gray;
-  border: none;
-}
-
-.container .hidden {
-  background-color: crimson;
-}
-
 .container h1 {
   padding: 50px;
   text-align: center;
@@ -81,55 +60,27 @@ nav ul li a:hover {
 
 .container table {
   margin: 0 auto;
-  border-spacing: 0 10px;
+}
+
+.container table a {
+  color: white;
 }
 
 .container table td {
-  padding: 10px 20px;
-}
-
-.container table table:nth-child(1) {
-  border-top-left-radius: 2px;
-}
-
-.container table #head {
-  background-color: transparent;
-}
-
-.container table tr {
-  background-color: #ebebeb;
+  padding-bottom: 15px;
 }
 
 .container table .icone {
   border-radius: 50%;
-  color: white;
   width: 35px;
   height: 35px;
+  background-color: blue;
   -webkit-box-shadow: 1px 1px 1px gray;
           box-shadow: 1px 1px 1px gray;
-  position: relative;
-}
-
-.container table .edit {
-  background-color: crimson;
-}
-
-.container table .delete {
-  background-color: #ff7010;
-}
-
-.container table .calc {
-  background-color: darkseagreen;
-}
-
-.container table .icone.delete:hover {
-  color: black;
-  -webkit-transition: 0.75s;
-  transition: 0.75s;
 }
 
 .container table .icone i {
-  padding: 10px;
+  padding: 8px;
 }
 
 .container table .icone:hover {
@@ -138,41 +89,8 @@ nav ul li a:hover {
   transition: 0.75s;
 }
 
-.container table .icone:hover .tooltiptext {
-  visibility: visible;
-}
-
-.container table .tdIcon {
-  padding: 15px;
-}
-
-.container table #first {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
 .container table #last {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.container table .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
-}
-
-.container .hide {
-  display: none;
+  padding: 15px;
 }
 
 .container h2 {
@@ -255,4 +173,4 @@ nav ul li a:hover {
     padding-top: 5%;
   }
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */

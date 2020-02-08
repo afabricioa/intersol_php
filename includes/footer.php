@@ -1,8 +1,17 @@
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <script>
-        M.AutoInit();
-    </script>
+  <script>
+    $(document).ready(function(){
+      $('#botaoProprietario').click(function(){
+        $('#divProprietarios').toggleClass('hide');
+        $('#botaoProprietario').toggleClass('hidden');
+
+      });
+
+      $('#botaoImovel').click(function(){
+        $('#divImoveis').toggleClass('hide');
+        $('#botaoImovel').toggleClass('hidden');
+      });
+    });
+  </script>
   </body>
 </html>
