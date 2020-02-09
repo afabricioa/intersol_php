@@ -18,12 +18,12 @@
 
         echo "entrou";
         $sql = "INSERT INTO proprietario (nome, endereco) VALUES ('$nome', '$endereco')";
-        echo("Error description: id: " . mysql_error($sql));
+        echo("Error description: id: " . mysql_error($conn, $sql));
         if(mysqli_query($conn, $sql)):
-            echo("Error description: id: " . mysql_error($sql));
+            echo("Error description: id: " . mysql_error($conn, $sql));
             header('Location: ../index.php?sucesso');
         else:
-            echo("Error description: id: " . mysql_error($sql));
+            echo("Error description: id: " . mysql_error($conn, $sql));
             header('Location: ../index.php?erro');
         endif;
     endif;
