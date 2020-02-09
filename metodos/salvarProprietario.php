@@ -3,9 +3,9 @@
 
         //clear
     function clear($input){
-        global $connect;
+        global $conn;
         //proteção sql injection
-        $var = mysqli_escape_string($connect, $input);
+        $var = mysqli_escape_string($conn, $input);
         //proteção xss
         $var = htmlspecialchars($var);
         return $var;
@@ -18,7 +18,7 @@
 
         $sql = "INSERT INTO proprietario (nome, endereco) VALUES ('$nome', '$endereco')";
 
-        if(mysqli_query($connect, $sql)):
+        if(mysqli_query($conn, $sql)):
             echo("Error description: id: " . mysql_error($sql));
             header('Location: ../index.php?sucesso');
         else:
