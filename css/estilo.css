@@ -1,0 +1,304 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  height: 10%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 15px;
+}
+
+nav ul li a:hover {
+  color: crimson;
+}
+
+.botao {
+  display: block;
+  width: 91%;
+  margin: 20px auto;
+  height: 40px;
+  border-radius: 2px;
+  font-size: 20px;
+  background-color: #3eae68;
+  color: white;
+  border: none;
+}
+
+.botao:hover {
+  color: #dd5432;
+}
+
+.divDeletar {
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+  height: auto;
+  padding: 50px;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.divDeletar h2 {
+  padding: 25px;
+}
+
+.divDeletar .botao {
+  width: 25%;
+}
+
+.container {
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+  height: auto;
+  padding: 50px;
+}
+
+.container #botoes {
+  text-align: center;
+}
+
+.container .botaoShow {
+  background-color: #3eae68;
+  width: 15%;
+  height: 30px;
+  font-size: 18px;
+  color: white;
+  border-radius: 6px;
+  -webkit-box-shadow: 1px 1px 1px gray;
+          box-shadow: 1px 1px 1px gray;
+  border: none;
+}
+
+.container .hidden {
+  background-color: crimson;
+}
+
+.container h1 {
+  padding: 50px;
+  text-align: center;
+}
+
+.container table {
+  margin: 0 auto;
+  border-spacing: 0 10px;
+}
+
+.container table td {
+  padding: 10px 20px;
+}
+
+.container table table:nth-child(1) {
+  border-top-left-radius: 2px;
+}
+
+.container table #head {
+  background-color: transparent;
+}
+
+.container table tr {
+  background-color: #ebebeb;
+}
+
+.container table .icone {
+  border-radius: 50%;
+  color: white;
+  width: 35px;
+  height: 35px;
+  -webkit-box-shadow: 1px 1px 1px gray;
+          box-shadow: 1px 1px 1px gray;
+  position: relative;
+}
+
+.container table .edit {
+  background-color: crimson;
+}
+
+.container table .delete {
+  background-color: #ff7010;
+}
+
+.container table .calc {
+  background-color: darkseagreen;
+}
+
+.container table .icone.delete:hover {
+  color: black;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+
+.container table .icone i {
+  padding: 10px;
+}
+
+.container table .icone:hover {
+  color: darkorange;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+
+.container table .icone:hover .tooltiptext {
+  visibility: visible;
+}
+
+.container table .tdIcon {
+  padding: 15px;
+}
+
+.container table #first {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.container table #last {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.container table .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.container .hide {
+  display: none;
+}
+
+.container h2 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.container .formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 4%;
+  font-size: 18px;
+}
+
+.container .formulario .item {
+  min-width: 500px;
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .formulario .item label {
+  width: 35%;
+}
+
+.container .formulario .item input {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  width: 65%;
+  padding: 10px;
+}
+
+.container .formulario button:hover {
+  color: #dd5432;
+}
+
+.container .formulario select {
+  font-size: 16px;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.3;
+  padding: 10px;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #aaa;
+  -webkit-box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+}
+
+.container .formulario .select-css::-ms-expand {
+  display: none;
+}
+
+.container .detalhes {
+  margin: 0 auto;
+  padding: 40px;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 60%;
+}
+
+.container .detalhes .md {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .detalhes .md h3 {
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .formulario {
+    padding-top: 5%;
+  }
+}
+/*# sourceMappingURL=estilo.css.map */
