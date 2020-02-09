@@ -19,7 +19,7 @@
         $sql = "INSERT INTO proprietario (nome, endereco) VALUES ('$nome', '$endereco')";
 
         if($connect->query($sql)):
-            $_SESSION['mensagem'] = "Cadastrado com sucesso!";
+            echo("Error description: id: " . mysql_error($sql));
             header('Location: ../index.php?sucesso');
         else:
             echo("Error description: id: " . mysql_error($sql));
