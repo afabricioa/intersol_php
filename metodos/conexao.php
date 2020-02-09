@@ -21,7 +21,7 @@ $password = $dbparts['pass'];
 $database = ltrim($dbparts['path'],'/');
 
 // Create connection
-$conn = mysqli_connect($hostname, $username, $password, $database);
+$conn = mysqli_connect($hostname, $username, $pasword, $database);
 
 // Check connection
 if (!$conn) {
