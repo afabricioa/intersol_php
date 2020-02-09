@@ -3,9 +3,9 @@
     require_once 'conexao.php';
 
     function clear($input){
-        global $connect;
+        global $conn;
 
-        $var = mysqli_escape_string($connect, $input);
+        $var = mysqli_escape_string($conn, $input);
 
         $var = htmlspecialchars($var);
 
@@ -20,10 +20,10 @@
 
         $sql = "UPDATE proprietario SET `nome` = '$nome', `endereco` = '$endereco' WHERE `idproprietario` = '$id'";
 
-        if(mysqli_query($connect, $sql)):
+        if(mysqli_query($conn, $sql)):
             header('Location: ../index.php?sucesso');
         else:
-            echo("Error description: id: ". var_dump($id) . mysql_error($connect));
+            echo("Error description: id: ". var_dump($id) . mysql_error($conn));
             
         endif;
     endif;
