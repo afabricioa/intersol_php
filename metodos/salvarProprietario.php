@@ -18,7 +18,7 @@
 
         $sql = "INSERT INTO proprietario (nome, endereco) VALUES ('$nome', '$endereco')";
 
-        if(mysqli_query($connect, $sql)):
+        if($connect->query($sql)):
             $_SESSION['mensagem'] = "Cadastrado com sucesso!";
             header('Location: ../index.php?sucesso');
         else:
