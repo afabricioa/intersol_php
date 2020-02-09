@@ -31,7 +31,7 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 18px;
+  font-size: 25px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -39,11 +39,45 @@ nav ul {
 }
 
 nav ul li {
-  padding: 15px;
+  padding: 25px;
 }
 
 nav ul li a:hover {
   color: crimson;
+}
+
+.botao {
+  display: block;
+  width: 91%;
+  margin: 20px auto;
+  height: 40px;
+  border-radius: 2px;
+  font-size: 20px;
+  background-color: #3eae68;
+  color: white;
+  border: none;
+}
+
+.botao:hover {
+  color: #dd5432;
+}
+
+.divDeletar {
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+  height: auto;
+  padding: 50px;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.divDeletar h2 {
+  padding: 25px;
+}
+
+.divDeletar .botao {
+  width: 25%;
 }
 
 .container {
@@ -68,6 +102,10 @@ nav ul li a:hover {
   -webkit-box-shadow: 1px 1px 1px gray;
           box-shadow: 1px 1px 1px gray;
   border: none;
+}
+
+.container .botaoShow:hover {
+  color: #dd5432;
 }
 
 .container .hidden {
@@ -213,18 +251,6 @@ nav ul li a:hover {
   padding: 10px;
 }
 
-.container .formulario button {
-  display: block;
-  width: 91%;
-  margin: 20px auto;
-  height: 40px;
-  border-radius: 2px;
-  font-size: 20px;
-  background-color: #3eae68;
-  color: white;
-  border: none;
-}
-
 .container .formulario button:hover {
   color: #dd5432;
 }
@@ -248,6 +274,30 @@ nav ul li a:hover {
 
 .container .formulario .select-css::-ms-expand {
   display: none;
+}
+
+.container .detalhes {
+  margin: 0 auto;
+  padding: 40px;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 60%;
+}
+
+.container .detalhes .md {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .detalhes .md h3 {
+  padding: 20px;
 }
 
 @media (max-width: 600px) {

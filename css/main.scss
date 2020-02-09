@@ -29,13 +29,13 @@ nav{
 
     ul{
         display: flex;
-        font-size: 18px;
+        font-size: 25px;
         justify-content: center;
         list-style: none;
     }
 
     ul li{
-        padding: 15px;
+        padding: 25px;
     }
 
     ul li a:hover{
@@ -43,6 +43,38 @@ nav{
     }
 }
 
+.botao{
+    display: block;
+    width: 91%;
+    margin: 20px auto;
+    height: 40px;
+    border-radius: 2px;
+    font-size: 20px;
+    background-color: rgb(62, 174, 104);
+    color: white;
+    border: none;
+}
+
+.botao:hover{
+    color: rgb(221, 84, 50);
+}
+.divDeletar{
+    width: 100%;
+    display: block;
+    min-height: 100vh;
+    height: auto;
+    padding: 50px;
+    text-align: center;
+    padding-top: 200px;
+    
+    h2{
+        padding: 25px;
+    }
+
+    .botao{
+        width: 25%;
+    }
+}
 .container{
     width: 100%;
     display: block;
@@ -63,6 +95,9 @@ nav{
         border-radius: 6px;
         box-shadow: 1px 1px 1px gray;
         border: none;
+    }
+    .botaoShow:hover{
+        color: rgb(221, 84, 50);
     }
 
     .hidden{
@@ -198,18 +233,6 @@ nav{
             
         }
 
-        button{
-            display: block;
-            width: 91%;
-            margin: 20px auto;
-            height: 40px;
-            border-radius: 2px;
-            font-size: 20px;
-            background-color: rgb(62, 174, 104);
-            color: white;
-            border: none;
-        }
-
         button:hover{
             color: rgb(221, 84, 50);
         }
@@ -231,6 +254,25 @@ nav{
         .select-css::-ms-expand {
             display: none;
         }
+    }
+
+    .detalhes{
+        margin: 0 auto;
+        padding: 40px;
+        display: block;
+        align-items: center;
+        text-align: center;
+        width: 60%;
+
+        .md{
+            display: flex;
+            justify-content: center;
+            
+            h3{
+                padding: 20px;
+            }
+        }
+        
     }
 }
 

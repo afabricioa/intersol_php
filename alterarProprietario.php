@@ -28,7 +28,7 @@ endif;
                 <input type="text" id="endereco" name="endereco" value="<?php echo $dados['endereco'] ?>">
             </div>
             
-            <button type="submit" name="botao-update">Alterar</button>
+            <button type="submit" class="botao" name="botao-update">Alterar</button>
             
         </form>
     </div>

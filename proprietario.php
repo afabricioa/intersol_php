@@ -17,7 +17,7 @@ include_once 'includes/header.php';
                 <input type="text" id="endereco" name="endereco">
             </div>
             
-            <button type="submit" name="botao-cadastrar">Cadastrar</button>
+            <button class="botao" type="submit" name="botao-cadastrar">Cadastrar</button>
             
         </form>
     </div>

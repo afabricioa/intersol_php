@@ -3,6 +3,9 @@ include_once 'metodos/conexao.php';
 
 include_once 'includes/header.php';
 
+include_once 'includes/mensagem.php';
+session_unset();
+
 $sql = "SELECT * FROM proprietario";
 $resultado = mysqli_query($connect, $sql);
 
@@ -54,7 +57,7 @@ endif;
                                 <td><?php echo $proprietario['nome'] ?></td>
                                 <td><?php echo $proprietario['endereco'] ?></td>
                                 <td class="tdIcon"><a href="alterarProprietario.php?id=<?php echo $proprietario['idproprietario']; ?>"><div class="icone edit"><i class="fas fa-user-edit"><span class="tooltiptext">Alterar</span></i></div></a></td>
-                                <td id="last" class="tdIcon"><a name="clickDeletarProprietario" href="metodos/deletarProprietario.php?id=<?php echo $proprietario['idproprietario']; ?>"><div class="icone delete"><i class="fas fa-trash"><span class="tooltiptext">Excluir</span></i></div></a></td>
+                                <td id="last" class="tdIcon"><a href="metodos/deletar.php?idproprietario=<?php echo $proprietario['idproprietario']; ?>"><div class="icone delete"><i class="fas fa-trash"><span class="tooltiptext">Excluir</span></i></div></a></td>
                             </tr>
                     <?php 
                         }
@@ -92,9 +95,9 @@ endif;
                                 <td id="first"><?php echo $prop['idimovel'] ?></td>
                                 <td><?php echo $prop['proprietario_fk'] ?></td>
                                 <td><?php echo $prop['nome'] ?></td>
-                                <td class="tdIcon"><a href="alterarImovel.php?id=<?php echo $prop['idimovel']; ?>"><div class="icone calc"><i class="fas fa-calculator"><span class="tooltiptext">Ver Cálculos</span></i></div></a></td>
+                                <td class="tdIcon"><a href="detalhes.php?id=<?php echo $prop['idimovel']; ?>"><div class="icone calc"><i class="fas fa-calculator"><span class="tooltiptext">Ver Cálculos</span></i></div></a></td>
                                 <td class="tdIcon"><a href="alterarImovel.php?id=<?php echo $prop['idimovel']; ?>"><div class="icone edit"><i class="fas fa-user-edit"></i><span class="tooltiptext">Alterar</span></div></a></td>
-                                <td id="last" class="tdIcon"><a name="clickDeletarImovel" href="metodos/deletarImovel.php?id=<?php echo $prop['idimovel']; ?>"><div class="icone delete"><i class="fas fa-trash"></i><span class="tooltiptext">Excluir</span></div></a></td>
+                                <td id="last" class="tdIcon"><a href="metodos/deletar.php?idimovel=<?php echo $prop['idimovel']; ?>"><div class="icone delete"><i class="fas fa-trash"></i><span class="tooltiptext">Excluir</span></div></a></td>
                             </tr>
                     <?php 
                         }
@@ -113,6 +116,7 @@ endif;
         </table>
     </div>
 </div>
+
 <?php 
 include_once 'includes/footer.php';
 ?>

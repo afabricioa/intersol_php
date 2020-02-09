@@ -13,5 +13,7 @@
       });
     });
   </script>
+
+  <div id="tos" class="toast">Erro</div>
   </body>
 </html>

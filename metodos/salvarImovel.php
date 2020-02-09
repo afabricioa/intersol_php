@@ -14,7 +14,7 @@
 
   if(isset($_POST['botao-cadastrar'])):
     $idproprietario = $_POST['idproprietario'];
-    $endereco =  clear($connect, $_POST['endereco']);
+    $endereco =  $_POST['endereco'];
     $areaterreno =  $_POST['areaterreno'];
     $areaconstruida =  $_POST['areaconstruida'];
     $aliquota =  $_POST['aliquota'];

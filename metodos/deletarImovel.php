@@ -12,14 +12,14 @@
         return $var;
     }
 
-    if(isset($_POST['clickDeletarImovel'])):
-        $sql = "DELETE FROM imovel WHERE idimovel = '$id'";
+    if(isset($_POST['botao-excluir'])):
+        $idimovel = $_POST['id'];
+        $sql = "DELETE FROM imovel WHERE idimovel = '$idimovel'";
 
         if(mysqli_query($connect, $sql)):
-        
-        header('Location: ../index.php');
+            header('Location: ../index.php?sucesso');
         else:
         
-        header('Location: ../index.php');
+            header('Location: ../index.php?falha');
         endif;
     endif;

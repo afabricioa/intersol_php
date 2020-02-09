@@ -54,7 +54,7 @@ endif;
                 <input type="number" id="aliquotaaplicada" step=".01" name="aliquotaaplicada" value="<?php echo $dados['aliquotaaplicada'] ?>">
             </div>
             
-            <button type="submit" name="botao-update">Alterar</button>
+            <button type="submit" class="botao" name="botao-update">Alterar</button>
         </form>
     </div>
     

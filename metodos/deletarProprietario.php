@@ -12,14 +12,16 @@
         return $var;
     }
 
-    if(isset($_POST['clickDeletarProprietario'])):
-        $sql = "DELETE FROM proprietario WHERE idproprietario = '$id'";
+    if(isset($_POST['botao-excluir'])):
+        echo ("oi");
+        $idproprietario = $_POST['id'];
+        $sql = "DELETE FROM proprietario WHERE idproprietario = '$idproprietario'";
 
         if(mysqli_query($connect, $sql)):
         
-        header('Location: ../index.php');
+        header('Location: ../index.php?sucesso');
         else:
         
-        header('Location: ../index.php');
+        header('Location: ../index.php?falha');
         endif;
     endif;

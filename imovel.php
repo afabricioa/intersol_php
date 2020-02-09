@@ -74,7 +74,7 @@ endif;
                 <input type="number" id="aliquotaaplicada" step=".01" name="aliquotaaplicada">
             </div>
             
-            <button type="submit" name="botao-cadastrar">Cadastrar</button>
+            <button class="botao" type="submit" name="botao-cadastrar">Cadastrar</button>
         </form>
     </div>
     

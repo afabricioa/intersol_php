@@ -1,0 +1,40 @@
+.toast{
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* propriedades acima centraliza o toast no topo da página */
+    color: white;
+    max-width: 400px;
+    height: 40px;
+    z-index: 1000;
+    padding: 10px;
+    background: #cccccc;
+    font-family: sans-serif;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #aaaaaa;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s visibility 0.2s;
+}
+
+.toast-visivel{
+    opacity: 1;
+    visibility: visible;
+}
+
+.toast-sucesso{
+    background-color: rgb(50, 158, 104);
+    border-color: rgb(35, 121, 78);
+    color: white;
+}
+
+.toast-falha{
+    background-color: rgb(161, 2, 2);
+    border-color: rgb(100, 2, 2);
+    color: white;
+}
