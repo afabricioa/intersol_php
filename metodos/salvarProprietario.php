@@ -16,14 +16,11 @@
         $nome = $_POST['nome']; 
         $endereco = $_POST['endereco'];
 
-        echo "entrou";
         $sql = "INSERT INTO proprietario (nome, endereco) VALUES ('$nome', '$endereco')";
-        echo("Error description: id: " . mysql_error($conn, $sql));
+       
         if(mysqli_query($conn, $sql)):
-            echo("Error description: id: " . mysql_error($conn, $sql));
             header('Location: ../index.php?sucesso');
         else:
-            echo("Error description: id: " . mysql_error($conn, $sql));
-            header('Location: ../index.php?erro');
+            echo("Error description: " . $conn -> error);
         endif;
     endif;
