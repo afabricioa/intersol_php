@@ -4,9 +4,9 @@
 
     //clear
   function clear($input){
-    global $connect;
+    global $conn;
     //proteção sql injection
-    $var = mysqli_escape_string($connect, $input);
+    $var = mysqli_escape_string($conn, $input);
     //proteção xss
     $var = htmlspecialchars($var);
     return $var;
@@ -35,10 +35,10 @@
                     '$valorvenalterreno', '$valorvenalconstrucao', '$valorvenaltotal', '$aliquotaaplicada',
                     '$valordoimposto', '$idproprietario')";
 
-    if(mysqli_query($connect, $sql)):
+    if(mysqli_query($conn, $sql)):
       header('Location: ../index.php?sucesso');
     else:
-      echo("Error description: " . $connect -> error);
+      echo("Error description: " . $conn -> error);
     endif;
   endif;
 ?>

@@ -3,7 +3,7 @@ include_once 'metodos/conexao.php';
 include_once 'includes/header.php';
 
 $sql = "SELECT * FROM proprietario";
-$resultado = mysqli_query($connect, $sql);
+$resultado = mysqli_query($conn, $sql);
 
 $proprietarios = array();
 
