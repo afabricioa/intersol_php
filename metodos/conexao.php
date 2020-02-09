@@ -21,9 +21,11 @@ $password = $dbparts['pass'];
 $database = ltrim($dbparts['path'],'/');
 
 // Create connection
-$conn = mysqli_connect($hostname, $username, $pasword, $database);
+$conn = mysqli_connect($hostname, $username, $password, $database);
 
 // Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+if(mysqli_connect_error()):
+   echo "Falha na conexão: ".mysqli_connect_error();
+else:
+    echo "conexão bem sucedida!";
+endif;

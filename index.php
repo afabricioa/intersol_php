@@ -7,7 +7,7 @@ include_once 'includes/mensagem.php';
 session_unset();
 
 $sql = "SELECT * FROM proprietario";
-$resultado = mysqli_query($connect, $sql);
+$resultado = mysqli_query($conn, $sql);
 
 $proprietarios = array();
 if(mysqli_num_rows($resultado) > 0):
@@ -20,7 +20,7 @@ $sql2 = "SELECT imovel.idimovel, imovel.proprietario_fk, proprietario.nome
         FROM imovel 
         INNER JOIN proprietario 
         ON imovel.proprietario_fk = proprietario.idproprietario";
-$resultado2 = mysqli_query($connect, $sql2);
+$resultado2 = mysqli_query($conn, $sql2);
 $p = array();
 if(mysqli_num_rows($resultado2) > 0):
     while($row2 = mysqli_fetch_array($resultado2)):

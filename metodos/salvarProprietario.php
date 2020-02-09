@@ -16,8 +16,9 @@
         $nome = clear($_POST['nome']); 
         $endereco = clear($_POST['endereco']);
 
+        echo "entrou";
         $sql = "INSERT INTO proprietario (nome, endereco) VALUES ('$nome', '$endereco')";
-
+        echo("Error description: id: " . mysql_error($sql));
         if(mysqli_query($conn, $sql)):
             echo("Error description: id: " . mysql_error($sql));
             header('Location: ../index.php?sucesso');
