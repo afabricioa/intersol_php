@@ -22,6 +22,7 @@
             $_SESSION['mensagem'] = "Cadastrado com sucesso!";
             header('Location: ../index.php?sucesso');
         else:
+            echo("Error description: id: " . mysql_error($connect));
             header('Location: ../index.php?erro');
         endif;
     endif;
