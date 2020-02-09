@@ -13,8 +13,8 @@
 
     if(isset($_POST['botao-cadastrar'])): //verifica se o botão de cadastrar foi acionado
         //filtra os valores que vieram do formulário
-        $nome = clear($_POST['nome']); 
-        $endereco = clear($_POST['endereco']);
+        $nome = $_POST['nome']; 
+        $endereco = $_POST['endereco'];
 
         echo "entrou";
         $sql = "INSERT INTO proprietario (nome, endereco) VALUES ('$nome', '$endereco')";
