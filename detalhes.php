@@ -4,16 +4,16 @@ include_once 'metodos/conexao.php';
 include_once 'includes/header.php';
 
 if(isset($_GET['id'])):
-    $id = mysqli_escape_string($connect, $_GET['id']);
+    $id = mysqli_escape_string($conn, $_GET['id']);
     $sql = "SELECT * FROM imovel WHERE idimovel = '$id'";
 
-    $resultado = mysqli_query($connect, $sql);
+    $resultado = mysqli_query($conn, $sql);
     $dados = mysqli_fetch_array($resultado);
 
     $idproprietario = $dados['proprietario_fk'];
     
     $sql2 = "SELECT * FROM proprietario WHERE idproprietario = '$idproprietario'";
-    $resultado2 = mysqli_query($connect, $sql2);
+    $resultado2 = mysqli_query($conn, $sql2);
     $proprietario = mysqli_fetch_array($resultado2);
 endif;
 

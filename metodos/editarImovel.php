@@ -3,9 +3,9 @@
     require_once 'conexao.php';
 
     function clear($input){
-        global $connect;
+        global $conn;
 
-        $var = mysqli_escape_string($connect, $input);
+        $var = mysqli_escape_string($conn, $input);
 
         $var = htmlspecialchars($var);
 
@@ -32,10 +32,10 @@
                 `valorvenaltotal` = '$valorvenaltotal', `aliquotaaplicada` = '$aliquotaaplicada', `valordoimposto` = '$valordoimposto'
                 WHERE `idimovel` = '$idimovel'";
 
-        if(mysqli_query($connect, $sql)):
+        if(mysqli_query($conn, $sql)):
             header('Location: ../index.php?sucesso');
         else:
-            echo("Error description: id: ". mysql_error("erro: " . $connect));
+            echo("Error description: id: ". mysql_error("erro: " . $conn));
             
         endif;
     endif;

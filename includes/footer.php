@@ -14,6 +14,6 @@
     });
   </script>
 
-  <div id="tos" class="toast">Erro</div>
+  <script src="toast/toast.js"></script>
   </body>
 </html>

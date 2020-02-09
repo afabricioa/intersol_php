@@ -26,6 +26,4 @@ $conn = mysqli_connect($hostname, $username, $password, $database);
 // Check connection
 if(mysqli_connect_error()):
    echo "Falha na conexão: ".mysqli_connect_error();
-else:
-    echo "conexão bem sucedida!";
 endif;

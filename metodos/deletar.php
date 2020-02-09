@@ -3,16 +3,16 @@
 require_once 'conexao.php';
 
 if(isset($_GET['idproprietario'])):
-    $id = mysqli_escape_string($connect, $_GET['idproprietario']);
+    $id = mysqli_escape_string($conn, $_GET['idproprietario']);
     $sql = "SELECT * FROM proprietario WHERE idproprietario = '$id'";
 
-    $resultado = mysqli_query($connect, $sql);
+    $resultado = mysqli_query($conn, $sql);
     $dados = mysqli_fetch_array($resultado);
 elseif(isset($_GET['idimovel'])):
-    $id = mysqli_escape_string($connect, $_GET['idimovel']);
+    $id = mysqli_escape_string($conn, $_GET['idimovel']);
     $sql = "SELECT * FROM imovel WHERE idimovel = '$id'";
 
-    $resultado = mysqli_query($connect, $sql);
+    $resultado = mysqli_query($conn, $sql);
     $dados = mysqli_fetch_array($resultado);
 endif;
 ?>

@@ -3,9 +3,9 @@
     require_once 'conexao.php';
 
     function clear($input){
-        global $connect;
+        global $conn;
 
-        $var = mysqli_escape_string($connect, $input);
+        $var = mysqli_escape_string($conn, $input);
 
         $var = htmlspecialchars($var);
 
@@ -16,7 +16,7 @@
         $idimovel = $_POST['id'];
         $sql = "DELETE FROM imovel WHERE idimovel = '$idimovel'";
 
-        if(mysqli_query($connect, $sql)):
+        if(mysqli_query($conn, $sql)):
             header('Location: ../index.php?sucesso');
         else:
         
