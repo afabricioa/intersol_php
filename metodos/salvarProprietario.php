@@ -18,7 +18,7 @@
 
         $sql = "INSERT INTO proprietario (nome, endereco) VALUES ('$nome', '$endereco')";
 
-        if($connect->query($sql)):
+        if(mysqli_query($connect, $sql)):
             echo("Error description: id: " . mysql_error($sql));
             header('Location: ../index.php?sucesso');
         else:
